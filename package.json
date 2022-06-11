@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "name": "@mijizhe/ansi-escapes",
   "license": "MIT",
   "version": "0.0.1",
@@ -7,6 +6,7 @@
     "email": "j@mijizhe.com",
     "name": "J"
   },
+  "type": "module",
   "scripts": {
     "fmt": "dprint fmt",
     "lint": "eslint .",
