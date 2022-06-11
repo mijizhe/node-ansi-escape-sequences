@@ -1,0 +1,4 @@
+{
+  "**/*.{ts,}": ["dprint fmt", "eslint --no-ignore"],
+  "**/*.{js,json,md,}": ["dprint fmt"]
+}
