@@ -14,10 +14,7 @@
     "build": "node scripts/build.js"
   },
   "files": [
-    "./package.json",
-    "./dist/",
-    "./LICENSE",
-    "./README.md"
+    "./dist/"
   ],
   "exports": {
     "./terminal": "./dist/terminal.js",
