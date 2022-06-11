@@ -81,11 +81,13 @@ declare class Terminal {
    */
   eraseEndLine(): this
   /**
-   *   erase the entire current line.
+   * erase the entire current line.
    */
   eraseLine(): this
   /**
    * erase from the current cursor position up the specified amount of rows.
+   *
+   * @param amount - amount of rows
    */
   eraseLines(amount: number): this
   /**
@@ -111,11 +113,13 @@ declare class Terminal {
   /**
    * output text
    */
-  text(text: string): this
+  text(...texts: string[]): this
   /**
    * line feed
+   *
+   * @param amount - amount of line feed
    */
-  ln(): this
+  linefeed(amount?: number): this
 }
 
 export { Terminal }

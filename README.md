@@ -15,7 +15,8 @@ pnpm install @mijizhe/ansi-escapes
 ```typescript
 import { cyan, dim, magenta } from "@mijizhe/ansi-escapes/colors"
 import { Terminal } from "@mijizhe/ansi-escapes/terminal"
-import { setTimeout } from "timers/promises"
+import { bold } from "@mijizhe/ansi-escapes/text"
+import { setTimeout as sleep } from "timers/promises"
 
 const terminal = new Terminal()
 
@@ -28,18 +29,17 @@ await terminal
 for (let i = 3; i > 0; i--) {
   await terminal
     .cursorRestorePosition()
-    .text(dim("countdown:"))
-    .ln()
-    .text(cyan(i.toString()))
+    .text(dim("waiting…"))
+    .linefeed(2)
+    .text(dim(bold("{")), cyan(i.toString()), dim(bold("}")))
     .write()
-  await setTimeout(1000)
+  await sleep(1000)
 }
 
 await terminal
   .clearScreen()
-  .text("🚀 ")
-  .text(magenta("fire!"))
-  .ln()
+  .text(cyan("hello"), magenta("world"), dim("!"))
+  .linefeed()
   .cursorShow()
   .write()
 ```

@@ -166,7 +166,7 @@ export class Terminal {
   }
 
   /**
-   *   erase the entire current line.
+   * erase the entire current line.
    */
   eraseLine() {
     this.#queue.push("\x1b[2K")
@@ -175,6 +175,8 @@ export class Terminal {
 
   /**
    * erase from the current cursor position up the specified amount of rows.
+   *
+   * @param amount - amount of rows
    */
   eraseLines(amount: number) {
     if (amount > 0) {
@@ -234,16 +236,18 @@ export class Terminal {
   /**
    * output text
    */
-  text(text: string) {
-    this.#queue.push(text)
+  text(...texts: string[]) {
+    this.#queue.push(texts.join(" "))
     return this
   }
 
   /**
    * line feed
+   *
+   * @param amount - amount of line feed
    */
-  ln() {
-    this.#queue.push("\n")
+  linefeed(amount = 1) {
+    this.#queue.push("\n".repeat(amount))
     return this
   }
 }
