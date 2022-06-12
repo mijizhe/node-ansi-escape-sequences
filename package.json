@@ -7,7 +7,7 @@
     "build": "node scripts/build.js"
   },
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "email": "j@mijizhe.com",
     "name": "J"
@@ -27,9 +27,7 @@
   },
   "typesVersions": {
     "*": {
-      "*": [
-        "./dist/*"
-      ]
+      "*": ["./dist/*"]
     }
   },
   "devDependencies": {
