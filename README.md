@@ -32,10 +32,9 @@ await terminal
 for (let i = 20; i > 0; i--) {
   await terminal
     .cursorRestorePosition()
-    .eraseLine()
+    .eraseDown()
     .text(bgYellow("loading…"))
     .linefeed(2)
-    .eraseLine()
     .text(dim(bold("{")), cyan(i.toString()), dim(bold("}")))
     .write()
   await sleep(100)
