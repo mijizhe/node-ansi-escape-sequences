@@ -1,5 +1,6 @@
 {
   "name": "@mijizhe/ansi-escape-sequences",
+  "description": "an ANSI escape sequences library for Node.js.",
   "scripts": {
     "fmt": "dprint fmt",
     "lint": "eslint .",
@@ -7,7 +8,7 @@
     "build": "node scripts/build.js"
   },
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": {
     "email": "j@mijizhe.com",
     "name": "J"
