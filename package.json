@@ -18,7 +18,7 @@
     "url": "https://github.com/mijizhe/node-ansi-escape-sequences.git"
   },
   "files": [
-    "./dist/"
+    "./dist"
   ],
   "exports": {
     "./terminal": "./dist/terminal.js",
