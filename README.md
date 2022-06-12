@@ -1,4 +1,8 @@
-# 🌈 an ANSI escape sequences library for nodejs.
+# 🌈
+
+> an ANSI escape sequences library for nodejs.
+
+## Features
 
 - only esm is supported.
 
