@@ -33,13 +33,13 @@ await terminal
   .cursorHide()
   .write()
 
-for (let i = 20; i > 0; i--) {
+for (let i = 30; i > 0; i--) {
   await terminal
     .cursorRestorePosition()
     .eraseDown()
     .text(bgYellow("loading…"))
     .linefeed(2)
-    .text(dim(bold("{")), cyan(i.toString()), dim(bold("}")))
+    .text(dim(bold("{")), cyan(String(i)), dim(bold("}")))
     .write()
   await sleep(100)
 }
