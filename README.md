@@ -1,21 +1,24 @@
-# 🌈 @mijizhe/ansi-escapes
-
-> an ansi escape sequences library for nodejs.
+# 🌈 an ANSI escape sequences library for nodejs.
 
 - only esm is supported.
 
 ## Install
 
 ```shell
-pnpm install @mijizhe/ansi-escapes
+pnpm install @mijizhe/ansi-escape-sequences
 ```
 
 ## Useage
 
 ```typescript
-import { cyan, dim, magenta } from "@mijizhe/ansi-escapes/colors"
-import { Terminal } from "@mijizhe/ansi-escapes/terminal"
-import { bold } from "@mijizhe/ansi-escapes/text"
+import {
+  bgYellow,
+  cyan,
+  dim,
+  magenta,
+} from "@mijizhe/ansi-escape-sequences/colors"
+import { Terminal } from "@mijizhe/ansi-escape-sequences/terminal"
+import { bold } from "@mijizhe/ansi-escape-sequences/text"
 import { setTimeout as sleep } from "timers/promises"
 
 const terminal = new Terminal()
@@ -26,14 +29,16 @@ await terminal
   .cursorHide()
   .write()
 
-for (let i = 3; i > 0; i--) {
+for (let i = 20; i > 0; i--) {
   await terminal
     .cursorRestorePosition()
-    .text(dim("waiting…"))
+    .eraseLine()
+    .text(bgYellow("loading…"))
     .linefeed(2)
+    .eraseLine()
     .text(dim(bold("{")), cyan(i.toString()), dim(bold("}")))
     .write()
-  await sleep(1000)
+  await sleep(100)
 }
 
 await terminal

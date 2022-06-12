@@ -1,5 +1,5 @@
 {
-  "name": "@mijizhe/ansi-escapes",
+  "name": "@mijizhe/ansi-escape-sequences",
   "scripts": {
     "fmt": "dprint fmt",
     "lint": "eslint .",
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mijizhe/node-ansi-escapes.git"
+    "url": "https://github.com/mijizhe/node-ansi-escape-sequences.git"
   },
   "files": [
     "./dist/"
