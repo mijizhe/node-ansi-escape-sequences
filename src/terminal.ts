@@ -251,3 +251,8 @@ export class Terminal {
     return this
   }
 }
+
+/**
+ * new a terminal
+ */
+export const newTerminal = () => new Terminal()

@@ -121,5 +121,9 @@ declare class Terminal {
    */
   linefeed(amount?: number): this
 }
+/**
+ * new a terminal
+ */
+declare const newTerminal: () => Terminal
 
-export { Terminal }
+export { newTerminal, Terminal }

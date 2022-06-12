@@ -23,11 +23,11 @@ import {
   dim,
   magenta,
 } from "@mijizhe/ansi-escape-sequences/colors"
-import { Terminal } from "@mijizhe/ansi-escape-sequences/terminal"
+import { newTerminal } from "@mijizhe/ansi-escape-sequences/terminal"
 import { bold } from "@mijizhe/ansi-escape-sequences/text"
 import { setTimeout as sleep } from "timers/promises"
 
-const terminal = new Terminal()
+const terminal = newTerminal()
 
 await terminal
   .clearScreen()
@@ -51,5 +51,6 @@ await terminal
   .text(cyan("hello"), magenta("world"), dim("!"))
   .linefeed()
   .cursorShow()
+  .write()
   .write()
 ```

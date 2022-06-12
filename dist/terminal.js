@@ -223,5 +223,9 @@ class Terminal {
     return this
   }
 }
+/**
+ * new a terminal
+ */
+const newTerminal = () => new Terminal()
 
-export { Terminal }
+export { newTerminal, Terminal }
