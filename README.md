@@ -1,8 +1,8 @@
 # 🌈
 
-> an ANSI escape sequences library for Node.js.
->
 > 一个适用于Node.js的ANSI转义序列库。
+>
+> an ANSI escape sequences library for Node.js.
 
 ## Features
 
