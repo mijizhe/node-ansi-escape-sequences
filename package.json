@@ -2,16 +2,16 @@
   "name": "@mijizhe/ansi-escape-sequences",
   "description": "an ANSI escape sequences library for Node.js.",
   "keywords": ["terminal", "tty", "console", "cli", "ansi", "escape"],
-  "version": "0.0.6",
   "author": {
     "email": "j@mijizhe.com",
     "name": "J"
   },
+  "license": "MIT",
+  "version": "0.0.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/mijizhe/node-ansi-escape-sequences.git"
   },
-  "license": "MIT",
   "type": "module",
   "scripts": {
     "fmt": "dprint fmt",
